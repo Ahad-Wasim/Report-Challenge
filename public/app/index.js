@@ -1,10 +1,36 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import './assets/styles/main.css';
 
-// axios.get('http://localhost:3333/reports').then(function(data){
-//   console.log(data);
-// });
+import TopBar from './components/topBar.js';
+import BottomWrapper from './components/bottomWrapper.js';
+
+
+
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      active: null
+    }
+  }
+
+  componentDidMount(){
+    
+  }
+
+  render(){
+    return (
+      <div className="inheritHeight">
+        <TopBar />
+        <BottomWrapper />
+      </div>
+    );
+
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("container"));
 
 
