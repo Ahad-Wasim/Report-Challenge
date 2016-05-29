@@ -2,19 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reports Challenge</title>
   </head>
 
   <body>
-    <div id="container">
+    <section id="container">
+
       <div class="top-wrapper">
         <div class="searchBar-wrapper"> 
           <input id="searchBar" type="text" placeholder="Filter..."/>
         </div>
       </div>
 
-      <div class="bottom-wrapper">
-        <div class="message-wrappers">
+      <section class="bottom-wrapper clearfix">
+        <nav class="message-wrappers">
           
           <ul>
             <li class="message">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</li>
@@ -33,9 +35,18 @@
             <li class="message">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</li>
           </ul>
 
-        </div>
-      </div>
-    </div>
+        </nav>
+
+        <article class="main-content">
+          <div class="main-content-wrapper">
+            <h1>This is the Header</h1>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </article>
+
+
+      </section>
+    </section>
 
     <script src="./bundle.js"></script>
   </body>
