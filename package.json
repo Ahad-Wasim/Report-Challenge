@@ -10,16 +10,28 @@
     "faker": "^3.1.0",
     "lodash": "^4.11.2",
     "morgan": "^1.7.0",
-    "node-uuid": "^1.4.7"
+    "node-uuid": "^1.4.7",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
   },
   "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
     "eslint": "^2.9.0",
     "eslint-config-airbnb-base": "^2.0.0",
     "eslint-plugin-import": "^1.6.1",
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
     "start": "node server/app.js",
+    "build": "webpack -p",
+    "launch": "webpack-dev-server --inline",
     "mon": "nodemon server/app.js",
     "lint": "eslint server",
     "test": "echo \"Error: no test specified\" && exit 1"
