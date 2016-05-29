@@ -6,18 +6,26 @@ import './assets/styles/main.css';
 import TopBar from './components/topBar.js';
 import BottomWrapper from './components/bottomWrapper.js';
 
-
-
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      active: null
+      active: null,
+      reportsList: []
     }
   }
 
+  sortByCreated(reports){
+
+  }
+
   componentDidMount(){
-    
+    const API = "http://localhost:3333/reports";
+    axios.get(API).then((response) => {
+
+
+      this.setState({ reportsList: response.data });
+    })
   }
 
   render(){
