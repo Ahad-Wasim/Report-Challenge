@@ -124,14 +124,20 @@ li.message:hover {
 .main-content {
   display: inline-block;
   float:left;
+  overflow-y: hidden;
   height:100%;
   width: calc(100% - 348px);
+}
+
+.main-content:hover {
+  overflow-y: scroll;
 }
 
 .main-content-wrapper {
   width:95%;
   margin: 15px auto 0 auto;
 }
+
 
 .main-content-wrapper h1 {
   font-size:35px;
