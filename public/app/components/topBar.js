@@ -1,10 +1,10 @@
 import React from 'react';
 import SearchBar from './searchBar.js';
 
-const TopBar = () => {
+const TopBar = (props) => {
   return (
     <section className="top-wrapper">
-      <SearchBar />
+      <SearchBar filterBy={props.filterBy} />
     </section>
   );
 };

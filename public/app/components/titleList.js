@@ -3,7 +3,7 @@ import Title from './title.js'
 
 const TitleList = (props) => {
 
-  var renderedReportLists = props.reportList.map((report) => {
+  var renderedReportLists = props.filteredReports.map((report) => {
     return (
       <Title 
         titleClick={props.titleClick}

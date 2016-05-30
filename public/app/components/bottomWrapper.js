@@ -23,7 +23,7 @@ class BottomWrapper extends Component {
         <nav className="title-wrappers">
           <TitleList 
             titleClick={this.titleClick.bind(this)} 
-            reportList={this.props.reportList} 
+            filteredReports={this.props.filteredReports} 
           />
         </nav>
 
