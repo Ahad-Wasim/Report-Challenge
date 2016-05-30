@@ -59,6 +59,10 @@ html, body {
 }
 
 
+.inheritHeight {
+  height:100%;
+}
+
 
 /* Container Top Section */
 
@@ -97,7 +101,7 @@ html, body {
   height:calc(100% - 80px);
 }
 
-.message-wrappers {
+.title-wrappers {
   display: inline-block;
   float: left;
   width:348px;
@@ -105,17 +109,17 @@ html, body {
   overflow-y: hidden;
 }
 
-.message-wrappers:hover {
+.title-wrappers:hover {
   overflow-y: scroll;
 }
 
-li.message {
+li.title {
   margin-top:-1px;
   padding:15px;
   border: 1px solid #EBE9EB;
 }
 
-li.message:hover {
+li.title:hover {
   background-color: #F6F5F7;
   cursor: pointer;
 }
@@ -131,6 +135,12 @@ li.message:hover {
 
 .main-content:hover {
   overflow-y: scroll;
+}
+
+.no-reports {
+  margin-top:15px;
+  text-align: center;
+  font-size:35px;
 }
 
 .main-content-wrapper {

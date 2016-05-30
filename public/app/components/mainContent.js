@@ -1,9 +1,7 @@
 import React from 'react';
 
-
-
 const MainContent = (props) => {
-  if(!props.active){
+  if(!props.active || props.filteredReports.indexOf(props.active) === -1){
     return <h1 className="no-reports">No Reports Selected</h1>
   }
 

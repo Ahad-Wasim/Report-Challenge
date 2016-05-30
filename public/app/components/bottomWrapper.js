@@ -29,7 +29,10 @@ class BottomWrapper extends Component {
 
 
         <article className="main-content">
-          <MainContent active={this.state.active} />
+          <MainContent
+            active={this.state.active} 
+            filteredReports={this.props.filteredReports}   
+          />
         </article>
 
       </section>
