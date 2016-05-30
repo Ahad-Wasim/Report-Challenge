@@ -6,33 +6,44 @@ import './assets/styles/main.css';
 import TopBar from './components/topBar.js';
 import BottomWrapper from './components/bottomWrapper.js';
 
+const API = "http://localhost:3333/reports";
+
+
 class App extends Component {
   constructor(){
     super();
     this.state = {
+      filter: '',
       active: null,
-      reportsList: []
+      reportList: [],
+      filteredReports: []
     }
   }
 
-  sortByCreated(reports){
-
+  componentDidMount(){
+    axios.get(API).then((response) => {
+      response.data.sort((a,b) => a.created > b.created);
+      this.setState({ 
+        reportList: response.data,
+        filteredReports: response.data 
+      });
+    })
   }
 
-  componentDidMount(){
-    const API = "http://localhost:3333/reports";
-    axios.get(API).then((response) => {
+  filterBy(term){
+    // This filter algorithm can be optimized by using Tries or a filtering module.
+    let filteredReports = this.state.reportList.filter((report) => {
+      return report.title.toUpperCase().indexOf(term) !== -1 ? true : false;
+    });
 
-
-      this.setState({ reportsList: response.data });
-    })
+    this.setState({filteredReports})
   }
 
   render(){
     return (
       <div className="inheritHeight">
-        <TopBar />
-        <BottomWrapper />
+        <TopBar filterBy={this.filterBy.bind(this)}/>
+        <BottomWrapper filteredReports={this.state.filteredReports} />
       </div>
     );
 

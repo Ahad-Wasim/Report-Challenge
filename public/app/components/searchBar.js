@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
-      filterTest: ''
+      searchTerm: ''
     }
   }
 
+  onEnteredText(e){
+    this.setState({searchTerm: e.target.value})
+    this.props.filterBy(e.target.value.toUpperCase());
+  }
 
 
   render(){
@@ -17,8 +21,8 @@ class SearchBar extends Component {
           id="searchBar" 
           type="text"
           placeholder="Filter..." 
-          value={this.state.filterTest}
-          onChange={ (e) => this.setState({filterTest: e.target.value}) }
+          value={this.state.searchTerm}
+          onChange={this.onEnteredText.bind(this)}
         />
       </div>
     );    
