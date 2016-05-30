@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TitleList from './titleList.js';
+import MainContent from './MainContent.js';
 
 
-const BottomWrapper = (props) => {
-  return (
-    <section className="bottom-wrapper clearfix">
-      
-      <nav className="title-wrappers">
-        <TitleList reportList={props.reportList} />
-      </nav>
+class BottomWrapper extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      active: null
+    }
+  }
+
+  titleClick(report){
+    this.setState({active: report});
+  }
 
 
-      <article class="main-content">
-      </article>
+  render(){
+    return (
+      <section className="bottom-wrapper clearfix">
+        
+        <nav className="title-wrappers">
+          <TitleList 
+            titleClick={this.titleClick.bind(this)} 
+            reportList={this.props.reportList} 
+          />
+        </nav>
 
-    </section>
-  );
+
+        <article className="main-content">
+          <MainContent active={this.state.active} />
+        </article>
+
+      </section>
+    );
+  }
+
 }
 
 export default BottomWrapper;
