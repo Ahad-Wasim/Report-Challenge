@@ -3,13 +3,14 @@ import Title from './title.js'
 
 const TitleList = (props) => {
 
-  var renderedReportLists = props.reportList.map((report)=> {
-
+  var renderedReportLists = props.reportList.map((report) => {
+    console.log(report)
+    return <Title title={report.title} key={report.id} />
   });
 
   return (
     <ul>
-      { reportrenderedReportListsList }
+      { renderedReportLists }
     </ul>
   );
 }
