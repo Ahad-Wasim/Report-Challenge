@@ -30,9 +30,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "node server/app.js",
-    "build": "webpack -p",
-    "launch": "webpack-dev-server --inline",
+    "build": "webpack -p && node server/app.js",
+    "start": "webpack-dev-server --inline",
     "mon": "nodemon server/app.js",
     "lint": "eslint server",
     "test": "echo \"Error: no test specified\" && exit 1"
