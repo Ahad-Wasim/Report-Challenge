@@ -1,3 +1,42 @@
+# Instructions
+
+Clone this repositiory
+
+```
+  > git clone https://github.com/Ahad-Wasim/Report-Challenge.git
+
+```
+
+
+Open the terminal and run the command below to install all dependencies
+
+```
+  > npm install
+
+```
+
+
+Run the command 'npm build' (This will build all static files and launch the API server)
+
+```
+  > npm run build
+
+```
+
+Type npm start. This will create a development server at http://localhost:8080/. Simply navigate to the server and you can view the project.
+
+```
+  > npm start
+
+```
+
+
+
+
+
+
+
+
 # TruSTAR Front-End Coding Exercise
 
 This is the coding exercise we give to all potential front-end team members. It consists of a few parts. Instructions are below.
