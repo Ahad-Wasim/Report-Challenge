@@ -43,7 +43,7 @@ html, body {
   *zoom: 1;
 }
 
-
+/* Main Container */
 
 #container {
   background-color:white;
@@ -62,6 +62,8 @@ html, body {
 .inheritHeight {
   height:100%;
 }
+
+
 
 
 /* Container Top Section */
@@ -93,6 +95,10 @@ html, body {
   border-radius: 5px;
   font-size:17px;
 }
+
+
+
+
 
 /* Container Bottom Section */
 
@@ -145,7 +151,7 @@ li.title:hover {
 
 .main-content-wrapper {
   width:95%;
-  margin: 15px auto 0 auto;
+  margin: 15px auto 20px auto;
 }
 
 

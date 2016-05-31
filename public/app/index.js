@@ -22,6 +22,7 @@ class App extends Component {
 
   componentDidMount(){
     axios.get(API).then((response) => {
+      // QuickSort algorithm -- n log n 
       response.data.sort((a,b) => a.created > b.created);
       this.setState({ 
         reportList: response.data,
